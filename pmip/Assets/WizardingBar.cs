@@ -17,6 +17,7 @@ public class WizardingBar : MonoBehaviour
 	void LateUpdate ()
 	{
 	    wizardingLabel.enabled = !player.IsSeen;
+	    Debug.Log(player.WankAmount);
 	    slider.value = player.WankAmount;
 	}
 }
