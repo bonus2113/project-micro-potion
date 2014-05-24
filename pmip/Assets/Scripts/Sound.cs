@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Sound : MonoBehaviour {
 
-    AudioClip m_Poem;
+    public AudioClip m_Poem;
 
 	// Use this for initialization
 	void Start () {
