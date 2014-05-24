@@ -14,7 +14,16 @@ public class Player : MonoBehaviour
             WankAmount += WPS*Time.deltaTime;
         }
         WankAmount = Mathf.Clamp01(WankAmount);
-        Debug.Log(IsSeen);
+        if (WankAmount == 1)
+        {
+            Vector3 explosionPos = transform.position;
+            Collider[] colliders = Physics.OverlapSphere(explosionPos, 20);
+            foreach (Collider hit in colliders)
+            {
+                if (hit && hit.rigidbody)
+                    hit.rigidbody.AddExplosionForce(20, explosionPos, 20, 3.0F);
+            }
+        }
         IsSeen = false;
     }
 }
