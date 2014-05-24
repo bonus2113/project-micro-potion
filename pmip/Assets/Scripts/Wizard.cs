@@ -16,14 +16,10 @@ public class Wizard : MonoBehaviour
         Vector3 playerDir = player.transform.position - transform.position;
 
         float angle = Vector3.Angle(playerDir, transform.forward);
-        Debug.Log(angle < MaxAngle);
-        if (angle * 2 < MaxAngle)
+        if (angle * 2 < MaxAngle && playerDir.magnitude < 10)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit))
-            {
-                player.IsSeen = hit.collider.gameObject.layer == LayerMask.NameToLayer("Player"); ;
-            }
+            player.IsSeen = true;
+            
         }
     }
 }

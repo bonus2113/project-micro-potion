@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-    public float WPS = 0.1f;
+    public float WPS;
     public float WankAmount { get; private set; }
     public bool IsSeen = false;
 
@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
         {
             WankAmount += WPS*Time.deltaTime;
         }
+
         WankAmount = Mathf.Clamp01(WankAmount);
         if (WankAmount == 1)
         {
