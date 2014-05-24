@@ -43,5 +43,6 @@ public class TimeManager : MonoBehaviour {
     private void Lose()
     {
         Debug.Log("Lose!");
+        Application.LoadLevel(0);
     }
 }
