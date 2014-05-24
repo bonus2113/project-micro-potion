@@ -233,7 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CrossHair: {fileID: 100006}
   ThrowKey: 0
-  ObjectToThrow: {fileID: 0}
+  ObjectToThrow: {fileID: 100000, guid: 3abcf8922e201544a905c4b2c2c74166, type: 2}
   ThrowStrength: 10
 --- !u!114 &11400002
 MonoBehaviour:
