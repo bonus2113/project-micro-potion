@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour 
+public class Player : MonoBehaviour
 {
+    public float WPS = 0.1f;
+    public float WankAmount { get; private set; }
+    public bool IsSeen = false;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    void LateUpdate()
+    {
+        if (!IsSeen)
+        {
+            WankAmount += WPS*Time.deltaTime;
+        }
+        WankAmount = Mathf.Clamp01(WankAmount);
+        Debug.Log(IsSeen);
+        IsSeen = false;
+    }
 }
