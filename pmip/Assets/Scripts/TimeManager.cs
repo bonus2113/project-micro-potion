@@ -9,6 +9,14 @@ public class TimeManager : MonoBehaviour {
     public UISprite m_TimerSprite = null;
 
 
+    public float NormalisedTimeToParentReturn
+    {
+        get
+        {
+            return this.m_InternalTimer / TimeToFamilyReturn;
+        }
+    }
+
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +32,7 @@ public class TimeManager : MonoBehaviour {
         this.m_InternalTimer += Time.deltaTime;
 
         this.m_TimerSprite.fillDirection = UISprite.FillDirection.Radial360;
-        this.m_TimerSprite.fillAmount = this.m_InternalTimer / TimeToFamilyReturn;
+        this.m_TimerSprite.fillAmount = NormalisedTimeToParentReturn;
 
         if (this.m_InternalTimer > TimeToFamilyReturn)
         {
