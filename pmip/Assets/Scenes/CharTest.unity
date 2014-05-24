@@ -550,6 +550,7 @@ GameObject:
   - 65: {fileID: 969183638}
   - 23: {fileID: 969183637}
   - 54: {fileID: 969183636}
+  - 114: {fileID: 969183641}
   m_Layer: 8
   m_Name: ThowObj
   m_TagString: Untagged
@@ -627,6 +628,17 @@ Transform:
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &969183641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 969183635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 964b6f7eb373e2c479b98b3e1e8cc051, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1433514863
 Prefab:
   m_ObjectHideFlags: 0
