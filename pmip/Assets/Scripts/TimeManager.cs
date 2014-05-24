@@ -4,7 +4,7 @@ using System.Collections;
 public class TimeManager : MonoBehaviour {
 
     private float m_InternalTimer = 0.0f;
-    private const float TimeToFamilyReturn = 60.0f;
+    private const float TimeToFamilyReturn = 90.0f;
 
     public UISprite m_TimerSprite = null;
 
