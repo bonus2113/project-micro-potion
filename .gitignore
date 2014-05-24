@@ -1,0 +1,8 @@
+/pmip/Library
+/pmip/Temp
+/pmip/*.csproj
+/pmip/*.sln
+/pmip/*.DotSettings
+/pmip/*.unityproj
+/pmip/*.suo
+/pmip/obj
